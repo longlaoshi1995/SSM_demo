@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax测试</title>
+   <!-- <script type="text/javascript" src="/jQuery/jquery-3.6.0.js"></script>-->
+    <script type="text/javascript" src="/jQuery/jQuery.js"></script>
+</head>
+<body style="width: 1920px;height: 1080px">
+  <div id="echarts" style="width: 500px;height: 500px;background: aquamarine;position: relative ">
+  </div>
+</body>
+<script type="text/javascript">
+    $("#echarts").append('<div style="width: 200px">你好</div>');
+    var param ={'name':'龙军','age':16,'sex':1,'birthPlace':'重庆','gruateSchool':'南理工','bobby':'跑步'};
+    $.ajax({
+        url: "/student/ajax",
+        type:"POST",
+        contentType:"application/json;charset=utf-8", //请求数据类型
+        dataType:'json',  //接收数据类型
+        data:JSON.stringify(param),
+        success:function (data) {
+            var list =  data;
+        }
+    });
+
+</script>
+</html>

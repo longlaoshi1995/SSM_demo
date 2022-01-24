@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--编写接口的sql映射文件-->
+<mapper namespace="com.longjun.dao.IStudent">
+    <insert id="save"  parameterType="com.longjun.domain.Student">
+        insert into student (name, sex, age, birth_place, graduate_school, hobby) values
+        (#{name}, #{sex}, #{age}, #{birthPlace}, #{gruateSchool},#{bobby})
+    </insert>
+</mapper>
