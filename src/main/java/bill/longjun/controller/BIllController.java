@@ -29,4 +29,7 @@ public class BIllController {
         return  result;
     }
 
+    private  void  steel(){
+        System.out.println("╡Бйтр╩об");
+    }
 }
